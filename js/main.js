@@ -1,12 +1,12 @@
 "use strict";
 const sectionElement = document.querySelector (".js-new-form")
-// sectionElement.classList.remove("collapsed")
+sectionElement.classList.remove("collapsed")
 
 const list = document.querySelector(".js-list");
 
 const kittenImageOne = "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg";
 const kitteNameOne = "Anastacio";
-const kittenDescOne = "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste.Es una maravilla acariciarle!";
+const kittenDescOne = "cariñoso, Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste.Es una maravilla acariciarle!";
 const kittenRaceOne = "British Shorthair";
 
 const kittenImageTwo = "https://images.emedicinehealth.com/images/article/main_image/cat-scratch-disease.jpg";
@@ -65,4 +65,12 @@ list.innerHTML += kittenOne;
 list.innerHTML += kittenTwo;
 list.innerHTML += kittenThree;
 
+
+
+const input_search_desc = document.querySelector('.js_in_search_desc');
+(input_search_desc.value = 'cariñoso');
+const descrSearchText = input_search_desc.value;
+if( kittenDescOne.includes(descrSearchText) ) {console.log()
+
+}
 
