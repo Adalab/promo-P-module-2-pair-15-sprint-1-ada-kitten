@@ -1,6 +1,7 @@
 "use strict";
-const sectionElement = document.querySelector (".js-new-form")
-sectionElement.classList.remove("collapsed")
+
+//const sectionElement = document.querySelector (".js-new-form")
+//sectionElement.classList.remove("collapsed")
 
 const list = document.querySelector(".js-list");
 
@@ -74,3 +75,35 @@ if( kittenDescOne.includes(descrSearchText) ) {console.log()
 
 }
 
+
+// EVENTO CLICK PARA EL + No se porqué no funciona
+
+const find = document.querySelector('.js-plus');
+
+find.addEventListener('click', () => {
+  form.classList.toggle("collapsed");
+});
+
+
+// EVENTO AÑADIR
+
+const add = document.querySelector('.js-btn-add');
+
+const inputDesc = document.querySelector(".js-input-desc");
+const inputPhoto = document.querySelector(".js-input-photo");
+const inputName = document.querySelector(".js-input-name");
+const inputRace = document.querySelector(".js-input-race");
+const labelMesageError = document.querySelector(".js-label-error");
+
+add.addEventListener('click', () => {
+  const valueDesc = inputDesc.value;
+  const valuePhoto = inputPhoto.value;
+  const valueName = inputName.value;
+  const valueRace = inputRace.value;
+
+  if (valueDesc === "" && valuePhoto === "" && valueName === "" && valueRace === "") {
+    labelMesageError.innerHTML = "Debe rellenar todos los valores";
+  } else {
+    labelMesageError.innerHTML = "Ahora mismo te añado el nuevo gatito";
+  }
+});
