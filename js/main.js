@@ -76,14 +76,14 @@ if( kittenDescOne.includes(descrSearchText) ) {console.log()
 }
 
 
-// EVENTO CLICK PARA EL 
+// EVENTO CLICK PARA EL +
 
-const find = document.querySelector('.js-plus');
-const form = document.querySelector(".new-form");
+// const find = document.querySelector('.js-plus');
+// const form = document.querySelector(".new-form");
 
-find.addEventListener('click', () => {
-  form.classList.toggle("collapsed");
-});
+// find.addEventListener('click', () => {
+//   form.classList.toggle("collapsed");
+// });
 
 
 // EVENTO AÑADIR
@@ -108,3 +108,26 @@ add.addEventListener('click', () => {
     labelMesageError.innerHTML = "Ahora mismo te añado el nuevo gatito";
   }
 });
+
+
+// MOSTRAR FORMULARIO NUEVO GATITO
+
+const find = document.querySelector('.js-plus');
+const form = document.querySelector(".new-form");
+
+function showMeCatForm () {
+  find.classList.remove('collapsed');
+}
+
+form.addEventListener('click',() => {
+  if(form.classList.contains('collapsed')) {
+    showMeCatForm()
+  }else {
+  hideNewCatForm()
+  }
+});
+
+
+function hideNewCatForm () {
+find.classList.add('collapsed');
+}
