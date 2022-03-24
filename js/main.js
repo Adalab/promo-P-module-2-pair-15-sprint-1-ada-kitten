@@ -76,9 +76,10 @@ if( kittenDescOne.includes(descrSearchText) ) {console.log()
 }
 
 
-// EVENTO CLICK PARA EL + No se porqué no funciona
+// EVENTO CLICK PARA EL 
 
 const find = document.querySelector('.js-plus');
+const form = document.querySelector(".new-form");
 
 find.addEventListener('click', () => {
   form.classList.toggle("collapsed");
