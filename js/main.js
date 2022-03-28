@@ -171,7 +171,7 @@ function renderKitten(cualquierKittenData) {
 </li>`;
 list.innerHTML += kittenGlobal;
 }
-renderKitten(kittenDataOne);
+// renderKitten(kittenDataOne);
 //renderKitten( {name:"sldkfjñsa", desc:"sldkfjs", race:"sdlkfsj", image: "sdlfkjs"} );
 
 /*
@@ -191,7 +191,7 @@ renderKitten(kittenDataOne);
 </li>`;
 list.innerHTML += kittenGlobal;
 */
-renderKitten(kittenDataTwo);
+// renderKitten(kittenDataTwo);
 /*
 
   const kittenGlobal = `<li class="card">
@@ -210,8 +210,18 @@ renderKitten(kittenDataTwo);
 </li>`;
 list.innerHTML += kittenGlobal;
 */
-renderKitten(kittenDataThree);
+// renderKitten(kittenDataThree);
 
 function renderRace (){
 
+}
+
+// CREAR UN ARRAY PARA METER EL OBJETO DE CADA GATO
+
+const kittenDataList = [kittenDataOne, kittenDataTwo, kittenDataThree];
+
+function renderKittenList(kittenDataList) {
+  renderKitten(kittenDataOne);
+  renderKitten(kittenDataTwo);
+  renderKitten(kittenDataThree);
 }
